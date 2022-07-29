@@ -9,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
@@ -32,5 +33,6 @@ class JokesServiceImplTest {
 
         // assert
         assertEquals(expectedQuote, quote);
+        verify(chuckNorrisQuotes).getRandomQuote();
     }
 }
