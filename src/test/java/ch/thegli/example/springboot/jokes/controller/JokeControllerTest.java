@@ -1,6 +1,6 @@
 package ch.thegli.example.springboot.jokes.controller;
 
-import ch.thegli.example.springboot.jokes.service.JokesServiceImpl;
+import ch.thegli.example.springboot.jokes.service.JokeServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -13,11 +13,11 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(JokesController.class)
-class JokesControllerTest {
+@WebMvcTest(JokeController.class)
+class JokeControllerTest {
 
     @MockBean
-    private JokesServiceImpl jokesService;
+    private JokeServiceImpl jokesService;
 
     @Autowired
     private MockMvc mockMvc;

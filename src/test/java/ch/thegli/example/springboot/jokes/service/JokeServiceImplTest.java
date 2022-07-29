@@ -13,14 +13,14 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = JokesServiceImpl.class)
-class JokesServiceImplTest {
+@ContextConfiguration(classes = JokeServiceImpl.class)
+class JokeServiceImplTest {
 
     @MockBean
     private ChuckNorrisQuotes chuckNorrisQuotes;
 
     @Autowired
-    private JokesServiceImpl jokesService;
+    private JokeServiceImpl jokesService;
 
     @Test
     void getRandomChuckNorrisQuote() {
