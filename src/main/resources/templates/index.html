@@ -1,1 +1,25 @@
-<!-- TODO implement template -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Jokes</title>
+    <style>
+        .chuck-norris-joke {
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Jokes</h1>
+
+<h2>Chuck Norris Quote</h2>
+<div class="chuck-norris-joke" th:text="${joke}">joke</div>
+
+<p>
+    <a href="/">
+        <button>Give Me Another One</button>
+    </a>
+</p>
+</body>
+</html>

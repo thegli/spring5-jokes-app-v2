@@ -14,6 +14,13 @@ You can learn more about the courses here:
 
 Using Spring Boot 3.x (only milestones so far in July 2022).
 
+```shell
+mvn clean package
+mvn spring-boot:run
+```
+
+[Jokes page](http://localhost:8080/)
+
 ## Resources
 
 * <http://patorjk.com/software/taag>
