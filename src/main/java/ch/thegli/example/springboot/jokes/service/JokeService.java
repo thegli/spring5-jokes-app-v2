@@ -1,6 +1,6 @@
 package ch.thegli.example.springboot.jokes.service;
 
-public interface JokesService {
+public interface JokeService {
 
     String getRandomChuckNorrisQuote();
 
