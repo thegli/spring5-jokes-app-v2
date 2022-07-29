@@ -7,6 +7,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -23,11 +24,14 @@ class JokesControllerTest {
 
     @Test
     void getJoke() throws Exception {
-        when(jokesService.getRandomChuckNorrisQuote()).thenReturn("Test test test");
+        String expectedJoke = "Test test test";
+        when(jokesService.getRandomChuckNorrisQuote()).thenReturn(expectedJoke);
 
-        mockMvc.perform(get("/"))
-                .andExpect(status().isOk());
+        String responseString = mockMvc.perform(get("/"))
+                .andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString();
 
+        assertTrue(responseString.contains(expectedJoke));
         verify(jokesService).getRandomChuckNorrisQuote();
     }
 }
