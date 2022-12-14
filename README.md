@@ -12,7 +12,7 @@ You can learn more about the courses here:
 
 ## Section 4 assignment "Building a Spring Boot Jokes App"
 
-Using Spring Boot 3.x (only milestones so far in July 2022).
+Using Spring Boot 3.0.
 
 ```shell
 mvn clean package
